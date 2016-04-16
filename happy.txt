@@ -1,0 +1,51 @@
+通过
+git add 文件名
+将文件添加到仓库
+
+通过
+git commit -m "这里写注释"
+将文件提交
+
+可以一次提交多个添加的文件
+git add file1.txt
+git add file2.txt,file3.txt
+git commit -m "一次性提交三个文件"
+
+通过
+git status
+命令查看仓库当前的状态
+
+通过
+git diff
+查看文件的区别, 知道文件做了哪些修改
+
+通过
+git log
+命令查看历史记录
+也可以显示简略版的
+git log --pretty=oneline
+
+通过
+git reset --hard HEAD~100(100表示往上回退的版本数)
+git reset --hard 323234(323234表示具体的版本id)
+来回退版本
+
+通过
+git reflog
+来记录每一次命令
+
+通过
+git diff HEAD -- 文件名
+可以查看工作区和版本库里的文件的区别
+
+
+直接丢弃工作区的修改,让文件回到上一次提交时的样子,用
+git checkout -- 文件名
+
+如果你把文件还保存到了暂存区, 那么要先
+git reset HEAD 文件名
+就能回到工作区, 再git checkout -- 文件名
+
+通过
+git rm 文件名
+可以用来删除一个文件
