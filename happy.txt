@@ -70,3 +70,41 @@ git push origin master
 通过
 git clone git@github.com:Az-Earl/库名.git
 克隆一个到本地
+
+创建一个分支
+创建dev分支, 然后切换到dev分支
+git checkout -b dev
+这个命令相当于下面两个命令
+git branch dev
+git checkout dev
+
+然后, 用
+git branch
+命令查看当前分支
+
+现在我们可以在dev分支上正常的提交
+
+在,dev分支的工作完成时, 我们切换回master分支
+git checkout master
+
+这个时候在dev分支上添加的内容还有没有在master上
+我们需要把dev分支的工作成果合并到master上
+git merge dev
+
+合并完成后, 我们可以删除掉dev分支
+git branch -d dev
+
+删除后, 查看下
+git branch
+就只剩下master分支了
+
+因为创建, 合并, 删除分支非常快, 所以鼓励使用分支, 对工作效率没有影响, 还更安全
+
+一览表:
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+
